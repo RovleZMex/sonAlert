@@ -1,0 +1,25 @@
+Nombre variable,Tipo de dato,Formato,Unidad de medida,Descripción,Identificadores,Catálogo de referencia,Detalle de relación con catálogos,Identificador de valores nulos,Ejemplo de dato
+Descripcion del lugar,texto,,,nombre del estableciemiento zona salva,,,,,KBURROS QUIROGA
+Latitud,numero,,, distancia angular hacia el norte o sur del ecuador de la zona salva,,,,,29.12066
+Longitud,numero,,,distancia angular hacia el este u oeste del meridiano de Greenwich de la zona salva,,,,,-111.02321
+Municipio,texto,,,municipio donde se encuentra la zona salva,,,,,HERMOSILLO
+Localidad,texto,,,localidad donde se encuentra la zona salva,,,,,HERMOSILLO
+Colonia,texto,,,colonia donde se encuentra la zona salva,,,,,LAS DUNAS
+Calle,texto,,,calle en donde se encuentra la zona salva,,,,,BLVD. ANTONIO QUIROGA
+Numero,numero,,,numero del estableciemiento que es zona salva,,,,,551
+Entre Calles,texto,,,entre que calle se encuentra el estableciemiento que es zona salva,,,,,"ESQUINA, BLVD GARCIA MORALES"
+Tipo de Lugar,texto,,,que giro tiene el estableciemiento que es zona salva,,,,,RESTAURANTE
+Lunes Inicio,hora,,,horario que abre el estableciemiento los lunes,,,,,12:00:00 p. m.
+Lunes Fin,hora,,,horario que cierra el establecimiento los lunes,,,,,02:00:00 a. m.
+Martes Inicio,hora,,,horario que abre el estableciemiento los martes,,,,,12:00:00 p. m.
+Martes Fin,hora,,,horario que cierra el establecimiento los martes,,,,,02:00:00 a. m.
+Miercoles Inicio,hora,,,horario que abre el estableciemiento los miércoles,,,,,12:00:00 p. m.
+Miercoles Fin,hora,,,horario que cierra el establecimiento los miércoles,,,,,02:00:00 a. m.
+Jueves Inicio,hora,,,horario que abre el estableciemiento los jueves,,,,,12:00:00 p. m.
+Jueves Fin,hora,,,horario que cierra el establecimiento los jueves,,,,,02:00:00 a. m.
+Viernes Inicio,hora,,,horario que abre el estableciemiento los viernes,,,,,12:00:00 p. m.
+Viernes Fin,hora,,,horario que cierra el establecimiento los viernes,,,,,02:00:00 a. m.
+Sabado Inicio,hora,,,horario que abre el estableciemiento los sábado,,,,,12:00:00 p. m.
+Sabado Fin,hora,,,horario que cierra el establecimiento los sábado,,,,,02:00:00 a. m.
+Domingo Inicio,hora,,,horario que abre el estableciemiento los domingo,,,,,12:00:00 p. m.
+Domingo Fin,hora,,,horario que cierra el establecimiento los domingo,,,,,02:00:00 a. m.

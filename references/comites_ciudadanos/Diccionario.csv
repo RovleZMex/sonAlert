@@ -1,0 +1,11 @@
+Nombre variable,Tipo de dato,Formato,Unidad de medida,Descripción,Identificadores,Catálogo de referencia,Detalle de relación con catálogos,Identificador de valores nulos,Ejemplo de dato
+fecha,fecha,,,fecha de la integración de comité,,,,,04/07/2024
+municipio,texto,,,municipio de la integración de comité,,,,,GUAYMAS
+localidad,texto,,,localidad de la integración de comité,,,,,GUAYMAS
+colonia,texto,,,colonia de la integración de comité,,,,,SAN GERONIMO
+programa,texto,,,programa al que pertenece  la integración de comité,,,,,COHESION COMUNITARIA 
+actividad,texto,,,actividad de la integración de comité,,,,,INTEGRACION COMITE/ RED VECINAL 
+tema,texto,,,participación ciudadana en la integración de los comites,,,,,PARTICIPACIÓN CIUDADANA
+tipo de población beneficidada,texto,,,tipo de población beneficidada de la integración de comité,,,,,ADULTOS
+total mujeres,numero,,,total mujeres de la integración de comité,,,,,44
+total hombres,numero,,,total hombres de la integración de comité,,,,,42
