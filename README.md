@@ -112,18 +112,6 @@ data/raw/**  ──►  sonalert/dataset.py  ──►  data/interim/panel_base.
 | COVID + target | 3 | `covid_lockdown`, `covid_period`, `crimen_violento_total` |
 | Pop bucket | 1 | `pop_bucket` (ordinal int 0-3) |
 
-### Split temporal recomendado
-
-Para series temporales el split debe ser **cronologico, nunca aleatorio**:
-
-| Set | Periodo | Filas | % |
-|-----|---------|-------|---|
-| Train | 2016-2023 | 5,760 | 67% |
-| Validation | 2024 | 864 | 10% |
-| Test | 2025 | 864 | 10% |
-
-El campo `fecha` se mantiene en el parquet para implementar el split downstream.
-
 ## Taxonomia de delitos
 
 Los ~66 tipos de delito originales se agregan en 11 categorias:
