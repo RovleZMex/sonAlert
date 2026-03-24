@@ -18,4 +18,8 @@ seaborn
 scikit-learn
 ydata-profiling
 
+# Pipeline
+openpyxl
+pyarrow
+
 -e .

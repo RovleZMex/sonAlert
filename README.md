@@ -4,7 +4,13 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-A data science project for sonAlert
+## Objetivo
+
+Modelo predictivo de incidencia delictiva municipal para el estado de Sonora, México.
+
+Hermosillo y Ciudad Obregón (Cajeme) figuran en el ranking 2025 de las 50 ciudades más violentas del mundo. Hermosillo registró un aumento del 60% en homicidios. Este proyecto entrena un modelo que predice la incidencia delictiva por **municipio y mes** usando datos históricos del portal de datos abiertos de Sonora, con el objetivo de optimizar la asignación de recursos policiales a nivel estatal.
+
+**Fuentes de datos:** Incidencia delictiva municipal (2015–2025), víctimas del fuero común, índices de marginación por municipio, proyecciones de población, y Zonas Salva — todos provenientes de [datos.sonora.gob.mx](https://datos.sonora.gob.mx).
 
 ## Project Organization
 

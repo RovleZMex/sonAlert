@@ -63,10 +63,23 @@ create_environment:
 download:
 	$(PYTHON_INTERPRETER) sonalert/dataset.py download
 
-## Procesar datos crudos y generar datos procesados
+## Construir panel base desde datos crudos → data/interim/
 .PHONY: data
-data:
+data: data/interim/panel_base.parquet
+
+data/interim/panel_base.parquet: data/raw/incidencia_delictiva/*.csv
 	$(PYTHON_INTERPRETER) sonalert/dataset.py main
+
+## Generar features desde panel base → data/processed/
+.PHONY: features
+features: data/processed/panel_features.parquet
+
+data/processed/panel_features.parquet: data/interim/panel_base.parquet
+	$(PYTHON_INTERPRETER) sonalert/features.py
+
+## Pipeline completo: data → features
+.PHONY: pipeline
+pipeline: features
 
 
 #################################################################################
