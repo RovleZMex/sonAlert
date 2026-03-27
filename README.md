@@ -68,7 +68,7 @@ data/raw/**  ──►  sonalert/dataset.py  ──►  data/interim/panel_base.
 - Marginación municipal (CONAPO 2020) — 13 variables socioeconómicas
 - Proyecciones de población anual — permite calcular tasas per cápita por 100k hab.
 - Zonas Salva — conteo de puntos de infraestructura de seguridad por municipio
-- `pop_bucket` — tamaño de municipio codificado como ordinal (0=rural, 1=pequeno, 2=medio, 3=urbano)
+- `pop_bucket` — tamaño de municipio codificado como ordinal (0=rural, 1=pequeño, 2=medio, 3=urbano)
 
 ***Feature engineering* temporal (por municipio):**
 - *Lags*: t-1, t-2, t-3, t-12 (x11 categorias = 44 *features*)
