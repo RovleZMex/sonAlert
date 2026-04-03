@@ -17,6 +17,7 @@ matplotlib
 seaborn
 scikit-learn
 ydata-profiling
+openpyxl
 
 # Pipeline
 openpyxl
