@@ -1,0 +1,156 @@
+variable,tipo_dato,grupo,descripcion,fuente
+Cve. Municipio,int64,identificador,Clave unica del municipio (INEGI),incidencia_delictiva/Catalogo.xlsx
+fecha,datetime64[ns],identificador,"Fecha del mes (primer dia del mes, formato datetime)",Derivada de anio y mes de los CSVs de incidencia
+homicidio_doloso,float64,conteo_crudo,"Conteo mensual de incidentes: Homicidio doloso (arma de fuego, arma blanca, otros)",CSVs incidencia delictiva 2015-2025
+homicidio_culposo,float64,conteo_crudo,Conteo mensual de incidentes: Homicidio culposo (todas las modalidades),CSVs incidencia delictiva 2015-2025
+feminicidio,float64,conteo_crudo,Conteo mensual de incidentes: Feminicidio (todas las modalidades),CSVs incidencia delictiva 2015-2025
+lesiones,float64,conteo_crudo,Conteo mensual de incidentes: Lesiones dolosas y culposas,CSVs incidencia delictiva 2015-2025
+robo_violento,float64,conteo_crudo,"Conteo mensual de incidentes: Robo con violencia (vehiculo, transeunte, negocio, casa, transportista)",CSVs incidencia delictiva 2015-2025
+robo_sin_violencia,float64,conteo_crudo,"Conteo mensual de incidentes: Robo sin violencia, hurto",CSVs incidencia delictiva 2015-2025
+violacion_sexual,float64,conteo_crudo,Conteo mensual de incidentes: Violacion simple y equiparada,CSVs incidencia delictiva 2015-2025
+secuestro,float64,conteo_crudo,"Conteo mensual de incidentes: Secuestro extorsivo, express y otros",CSVs incidencia delictiva 2015-2025
+extorsion,float64,conteo_crudo,Conteo mensual de incidentes: Extorsion (todas las modalidades),CSVs incidencia delictiva 2015-2025
+violencia_familiar,float64,conteo_crudo,Conteo mensual de incidentes: Violencia familiar,CSVs incidencia delictiva 2015-2025
+otros,float64,conteo_crudo,"Conteo mensual de incidentes: Resto de delitos: narcomenudeo, dano a propiedad, amenazas, fraude, etc.",CSVs incidencia delictiva 2015-2025
+POB_TOT,int64,marginacion,Poblacion total del municipio (Censo 2020),marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+ANALF,float64,marginacion,% Poblacion de 15 anios o mas analfabeta,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+SBASC,float64,marginacion,% Poblacion de 15 anios o mas sin educacion basica,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+OVSDE,float64,marginacion,% Ocupantes en viviendas particulares sin drenaje ni excusado,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+OVSEE,float64,marginacion,% Ocupantes en viviendas particulares sin energia electrica,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+OVSAE,float64,marginacion,% Ocupantes en viviendas particulares sin agua entubada,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+OVPT,float64,marginacion,% Ocupantes en viviendas particulares con piso de tierra,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+VHAC,float64,marginacion,% Viviendas particulares con hacinamiento,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+PL.5000,float64,marginacion,% Poblacion en localidades con menos de 5000 habitantes,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+PO2SM,float64,marginacion,% Poblacion ocupada con ingresos menores a 2 salarios minimos,marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+IM_2020,float64,marginacion,Indice de marginacion 2020 (CONAPO),marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+GM_2020,int64,marginacion,"Grado de marginacion 2020, codificado ordinal (1=Muy bajo, 2=Bajo, 3=Medio, 4=Alto, 5=Muy alto)",marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+IMN_2020,float64,marginacion,Indice de marginacion normalizado 2020 (CONAPO),marginacion_municipal/Indice de marginacion por municipio 2020.xlsx
+año,int32,temporal,Anio extraido de la fecha (usado para join con poblacion),Derivada de fecha
+POB_MIT_MUN,int64,demografia,Poblacion a mitad de anio del municipio (proyeccion CONAPO),proyecciones_poblacion/Indicadores demograficos 1990-2040.xlsx
+POB_15_64,int64,demografia,Poblacion total de 15 a 64 anios,proyecciones_poblacion/Indicadores demograficos 1990-2040.xlsx
+EDAD_MED,int64,demografia,Edad mediana del municipio,proyecciones_poblacion/Indicadores demograficos 1990-2040.xlsx
+RAZ_DEP,float64,demografia,Razon de dependencia total (dependientes por cada 100 personas en edad productiva),proyecciones_poblacion/Indicadores demograficos 1990-2040.xlsx
+homicidio_doloso_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de homicidio doloso (arma de fuego, arma blanca, otros)","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+homicidio_culposo_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de homicidio culposo (todas las modalidades)","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+feminicidio_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de feminicidio (todas las modalidades)","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+lesiones_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de lesiones dolosas y culposas","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+robo_violento_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de robo con violencia (vehiculo, transeunte, negocio, casa, transportista)","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+robo_sin_violencia_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de robo sin violencia, hurto","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+violacion_sexual_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de violacion simple y equiparada","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+secuestro_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de secuestro extorsivo, express y otros","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+extorsion_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de extorsion (todas las modalidades)","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+violencia_familiar_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de violencia familiar","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+otros_tasa,float64,tasa_per_capita,"Tasa por 100,000 habitantes de resto de delitos: narcomenudeo, dano a propiedad, amenazas, fraude, etc.","Derivada: (conteo / POB_MIT_MUN) * 100,000"
+pop_bucket,int64,demografia,"Estrato poblacional ordinal (0=rural, 1=pequeno, 2=medio, 3=urbano) calculado con qcut en 4 cuartiles de POB_MIT_MUN",Derivada de POB_MIT_MUN
+n_zonas_salva,int64,zonas_salva,Cantidad de establecimientos Zona Salva en el municipio,zonas_salva/*.xlsx (agregado por municipio)
+n_tipos_lugar,int64,zonas_salva,Cantidad de tipos de lugar unicos entre las Zonas Salva del municipio,zonas_salva/*.xlsx (agregado por municipio)
+n_colonias_cubiertas,int64,zonas_salva,Cantidad de colonias con al menos una Zona Salva en el municipio,zonas_salva/*.xlsx (agregado por municipio)
+n_escuelas,int64,zonas_salva,Cantidad de Zonas Salva de tipo ESCUELA en el municipio,zonas_salva/*.xlsx (agregado por municipio)
+n_gobierno,int64,zonas_salva,Cantidad de Zonas Salva de tipo GOBIERNO en el municipio,zonas_salva/*.xlsx (agregado por municipio)
+n_salud,int64,zonas_salva,Cantidad de Zonas Salva de tipo SALUD en el municipio,zonas_salva/*.xlsx (agregado por municipio)
+mes,int32,temporal,Mes del anio (1-12),Derivada de fecha
+trimestre,int32,temporal,Trimestre del anio (1-4),Derivada de fecha
+mes_sin,float64,temporal,Encoding ciclico del mes: sin(2*pi*mes/12),Derivada de mes
+mes_cos,float64,temporal,Encoding ciclico del mes: cos(2*pi*mes/12),Derivada de mes
+homicidio_doloso_lag1,float64,lag,Conteo de homicidio_doloso en t-1 (mes anterior),Derivada de homicidio_doloso con shift(1)
+homicidio_doloso_lag2,float64,lag,Conteo de homicidio_doloso en t-2 (hace 2 meses),Derivada de homicidio_doloso con shift(2)
+homicidio_doloso_lag3,float64,lag,Conteo de homicidio_doloso en t-3 (hace 3 meses),Derivada de homicidio_doloso con shift(3)
+homicidio_doloso_lag12,float64,lag,Conteo de homicidio_doloso en t-12 (mismo mes del anio anterior),Derivada de homicidio_doloso con shift(12)
+homicidio_doloso_roll3_mean,float64,rolling,Media movil 3 meses de homicidio_doloso (sin incluir mes actual),Derivada de homicidio_doloso con shift(1).rolling(3)
+homicidio_doloso_roll6_mean,float64,rolling,Media movil 6 meses de homicidio_doloso (sin incluir mes actual),Derivada de homicidio_doloso con shift(1).rolling(6)
+homicidio_doloso_roll12_mean,float64,rolling,Media movil 12 meses de homicidio_doloso (sin incluir mes actual),Derivada de homicidio_doloso con shift(1).rolling(12)
+homicidio_doloso_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de homicidio_doloso (sin incluir mes actual),Derivada de homicidio_doloso con shift(1).rolling(3).std()
+homicidio_doloso_yoy_change,float64,tendencia,Cambio year-over-year de homicidio_doloso: (x_t - x_t-12) / (x_t-12 + 1),Derivada de homicidio_doloso y homicidio_doloso_lag12
+homicidio_culposo_lag1,float64,lag,Conteo de homicidio_culposo en t-1 (mes anterior),Derivada de homicidio_culposo con shift(1)
+homicidio_culposo_lag2,float64,lag,Conteo de homicidio_culposo en t-2 (hace 2 meses),Derivada de homicidio_culposo con shift(2)
+homicidio_culposo_lag3,float64,lag,Conteo de homicidio_culposo en t-3 (hace 3 meses),Derivada de homicidio_culposo con shift(3)
+homicidio_culposo_lag12,float64,lag,Conteo de homicidio_culposo en t-12 (mismo mes del anio anterior),Derivada de homicidio_culposo con shift(12)
+homicidio_culposo_roll3_mean,float64,rolling,Media movil 3 meses de homicidio_culposo (sin incluir mes actual),Derivada de homicidio_culposo con shift(1).rolling(3)
+homicidio_culposo_roll6_mean,float64,rolling,Media movil 6 meses de homicidio_culposo (sin incluir mes actual),Derivada de homicidio_culposo con shift(1).rolling(6)
+homicidio_culposo_roll12_mean,float64,rolling,Media movil 12 meses de homicidio_culposo (sin incluir mes actual),Derivada de homicidio_culposo con shift(1).rolling(12)
+homicidio_culposo_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de homicidio_culposo (sin incluir mes actual),Derivada de homicidio_culposo con shift(1).rolling(3).std()
+homicidio_culposo_yoy_change,float64,tendencia,Cambio year-over-year de homicidio_culposo: (x_t - x_t-12) / (x_t-12 + 1),Derivada de homicidio_culposo y homicidio_culposo_lag12
+feminicidio_lag1,float64,lag,Conteo de feminicidio en t-1 (mes anterior),Derivada de feminicidio con shift(1)
+feminicidio_lag2,float64,lag,Conteo de feminicidio en t-2 (hace 2 meses),Derivada de feminicidio con shift(2)
+feminicidio_lag3,float64,lag,Conteo de feminicidio en t-3 (hace 3 meses),Derivada de feminicidio con shift(3)
+feminicidio_lag12,float64,lag,Conteo de feminicidio en t-12 (mismo mes del anio anterior),Derivada de feminicidio con shift(12)
+feminicidio_roll3_mean,float64,rolling,Media movil 3 meses de feminicidio (sin incluir mes actual),Derivada de feminicidio con shift(1).rolling(3)
+feminicidio_roll6_mean,float64,rolling,Media movil 6 meses de feminicidio (sin incluir mes actual),Derivada de feminicidio con shift(1).rolling(6)
+feminicidio_roll12_mean,float64,rolling,Media movil 12 meses de feminicidio (sin incluir mes actual),Derivada de feminicidio con shift(1).rolling(12)
+feminicidio_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de feminicidio (sin incluir mes actual),Derivada de feminicidio con shift(1).rolling(3).std()
+feminicidio_yoy_change,float64,tendencia,Cambio year-over-year de feminicidio: (x_t - x_t-12) / (x_t-12 + 1),Derivada de feminicidio y feminicidio_lag12
+lesiones_lag1,float64,lag,Conteo de lesiones en t-1 (mes anterior),Derivada de lesiones con shift(1)
+lesiones_lag2,float64,lag,Conteo de lesiones en t-2 (hace 2 meses),Derivada de lesiones con shift(2)
+lesiones_lag3,float64,lag,Conteo de lesiones en t-3 (hace 3 meses),Derivada de lesiones con shift(3)
+lesiones_lag12,float64,lag,Conteo de lesiones en t-12 (mismo mes del anio anterior),Derivada de lesiones con shift(12)
+lesiones_roll3_mean,float64,rolling,Media movil 3 meses de lesiones (sin incluir mes actual),Derivada de lesiones con shift(1).rolling(3)
+lesiones_roll6_mean,float64,rolling,Media movil 6 meses de lesiones (sin incluir mes actual),Derivada de lesiones con shift(1).rolling(6)
+lesiones_roll12_mean,float64,rolling,Media movil 12 meses de lesiones (sin incluir mes actual),Derivada de lesiones con shift(1).rolling(12)
+lesiones_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de lesiones (sin incluir mes actual),Derivada de lesiones con shift(1).rolling(3).std()
+lesiones_yoy_change,float64,tendencia,Cambio year-over-year de lesiones: (x_t - x_t-12) / (x_t-12 + 1),Derivada de lesiones y lesiones_lag12
+robo_violento_lag1,float64,lag,Conteo de robo_violento en t-1 (mes anterior),Derivada de robo_violento con shift(1)
+robo_violento_lag2,float64,lag,Conteo de robo_violento en t-2 (hace 2 meses),Derivada de robo_violento con shift(2)
+robo_violento_lag3,float64,lag,Conteo de robo_violento en t-3 (hace 3 meses),Derivada de robo_violento con shift(3)
+robo_violento_lag12,float64,lag,Conteo de robo_violento en t-12 (mismo mes del anio anterior),Derivada de robo_violento con shift(12)
+robo_violento_roll3_mean,float64,rolling,Media movil 3 meses de robo_violento (sin incluir mes actual),Derivada de robo_violento con shift(1).rolling(3)
+robo_violento_roll6_mean,float64,rolling,Media movil 6 meses de robo_violento (sin incluir mes actual),Derivada de robo_violento con shift(1).rolling(6)
+robo_violento_roll12_mean,float64,rolling,Media movil 12 meses de robo_violento (sin incluir mes actual),Derivada de robo_violento con shift(1).rolling(12)
+robo_violento_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de robo_violento (sin incluir mes actual),Derivada de robo_violento con shift(1).rolling(3).std()
+robo_violento_yoy_change,float64,tendencia,Cambio year-over-year de robo_violento: (x_t - x_t-12) / (x_t-12 + 1),Derivada de robo_violento y robo_violento_lag12
+robo_sin_violencia_lag1,float64,lag,Conteo de robo_sin_violencia en t-1 (mes anterior),Derivada de robo_sin_violencia con shift(1)
+robo_sin_violencia_lag2,float64,lag,Conteo de robo_sin_violencia en t-2 (hace 2 meses),Derivada de robo_sin_violencia con shift(2)
+robo_sin_violencia_lag3,float64,lag,Conteo de robo_sin_violencia en t-3 (hace 3 meses),Derivada de robo_sin_violencia con shift(3)
+robo_sin_violencia_lag12,float64,lag,Conteo de robo_sin_violencia en t-12 (mismo mes del anio anterior),Derivada de robo_sin_violencia con shift(12)
+robo_sin_violencia_roll3_mean,float64,rolling,Media movil 3 meses de robo_sin_violencia (sin incluir mes actual),Derivada de robo_sin_violencia con shift(1).rolling(3)
+robo_sin_violencia_roll6_mean,float64,rolling,Media movil 6 meses de robo_sin_violencia (sin incluir mes actual),Derivada de robo_sin_violencia con shift(1).rolling(6)
+robo_sin_violencia_roll12_mean,float64,rolling,Media movil 12 meses de robo_sin_violencia (sin incluir mes actual),Derivada de robo_sin_violencia con shift(1).rolling(12)
+robo_sin_violencia_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de robo_sin_violencia (sin incluir mes actual),Derivada de robo_sin_violencia con shift(1).rolling(3).std()
+robo_sin_violencia_yoy_change,float64,tendencia,Cambio year-over-year de robo_sin_violencia: (x_t - x_t-12) / (x_t-12 + 1),Derivada de robo_sin_violencia y robo_sin_violencia_lag12
+violacion_sexual_lag1,float64,lag,Conteo de violacion_sexual en t-1 (mes anterior),Derivada de violacion_sexual con shift(1)
+violacion_sexual_lag2,float64,lag,Conteo de violacion_sexual en t-2 (hace 2 meses),Derivada de violacion_sexual con shift(2)
+violacion_sexual_lag3,float64,lag,Conteo de violacion_sexual en t-3 (hace 3 meses),Derivada de violacion_sexual con shift(3)
+violacion_sexual_lag12,float64,lag,Conteo de violacion_sexual en t-12 (mismo mes del anio anterior),Derivada de violacion_sexual con shift(12)
+violacion_sexual_roll3_mean,float64,rolling,Media movil 3 meses de violacion_sexual (sin incluir mes actual),Derivada de violacion_sexual con shift(1).rolling(3)
+violacion_sexual_roll6_mean,float64,rolling,Media movil 6 meses de violacion_sexual (sin incluir mes actual),Derivada de violacion_sexual con shift(1).rolling(6)
+violacion_sexual_roll12_mean,float64,rolling,Media movil 12 meses de violacion_sexual (sin incluir mes actual),Derivada de violacion_sexual con shift(1).rolling(12)
+violacion_sexual_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de violacion_sexual (sin incluir mes actual),Derivada de violacion_sexual con shift(1).rolling(3).std()
+violacion_sexual_yoy_change,float64,tendencia,Cambio year-over-year de violacion_sexual: (x_t - x_t-12) / (x_t-12 + 1),Derivada de violacion_sexual y violacion_sexual_lag12
+secuestro_lag1,float64,lag,Conteo de secuestro en t-1 (mes anterior),Derivada de secuestro con shift(1)
+secuestro_lag2,float64,lag,Conteo de secuestro en t-2 (hace 2 meses),Derivada de secuestro con shift(2)
+secuestro_lag3,float64,lag,Conteo de secuestro en t-3 (hace 3 meses),Derivada de secuestro con shift(3)
+secuestro_lag12,float64,lag,Conteo de secuestro en t-12 (mismo mes del anio anterior),Derivada de secuestro con shift(12)
+secuestro_roll3_mean,float64,rolling,Media movil 3 meses de secuestro (sin incluir mes actual),Derivada de secuestro con shift(1).rolling(3)
+secuestro_roll6_mean,float64,rolling,Media movil 6 meses de secuestro (sin incluir mes actual),Derivada de secuestro con shift(1).rolling(6)
+secuestro_roll12_mean,float64,rolling,Media movil 12 meses de secuestro (sin incluir mes actual),Derivada de secuestro con shift(1).rolling(12)
+secuestro_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de secuestro (sin incluir mes actual),Derivada de secuestro con shift(1).rolling(3).std()
+secuestro_yoy_change,float64,tendencia,Cambio year-over-year de secuestro: (x_t - x_t-12) / (x_t-12 + 1),Derivada de secuestro y secuestro_lag12
+extorsion_lag1,float64,lag,Conteo de extorsion en t-1 (mes anterior),Derivada de extorsion con shift(1)
+extorsion_lag2,float64,lag,Conteo de extorsion en t-2 (hace 2 meses),Derivada de extorsion con shift(2)
+extorsion_lag3,float64,lag,Conteo de extorsion en t-3 (hace 3 meses),Derivada de extorsion con shift(3)
+extorsion_lag12,float64,lag,Conteo de extorsion en t-12 (mismo mes del anio anterior),Derivada de extorsion con shift(12)
+extorsion_roll3_mean,float64,rolling,Media movil 3 meses de extorsion (sin incluir mes actual),Derivada de extorsion con shift(1).rolling(3)
+extorsion_roll6_mean,float64,rolling,Media movil 6 meses de extorsion (sin incluir mes actual),Derivada de extorsion con shift(1).rolling(6)
+extorsion_roll12_mean,float64,rolling,Media movil 12 meses de extorsion (sin incluir mes actual),Derivada de extorsion con shift(1).rolling(12)
+extorsion_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de extorsion (sin incluir mes actual),Derivada de extorsion con shift(1).rolling(3).std()
+extorsion_yoy_change,float64,tendencia,Cambio year-over-year de extorsion: (x_t - x_t-12) / (x_t-12 + 1),Derivada de extorsion y extorsion_lag12
+violencia_familiar_lag1,float64,lag,Conteo de violencia_familiar en t-1 (mes anterior),Derivada de violencia_familiar con shift(1)
+violencia_familiar_lag2,float64,lag,Conteo de violencia_familiar en t-2 (hace 2 meses),Derivada de violencia_familiar con shift(2)
+violencia_familiar_lag3,float64,lag,Conteo de violencia_familiar en t-3 (hace 3 meses),Derivada de violencia_familiar con shift(3)
+violencia_familiar_lag12,float64,lag,Conteo de violencia_familiar en t-12 (mismo mes del anio anterior),Derivada de violencia_familiar con shift(12)
+violencia_familiar_roll3_mean,float64,rolling,Media movil 3 meses de violencia_familiar (sin incluir mes actual),Derivada de violencia_familiar con shift(1).rolling(3)
+violencia_familiar_roll6_mean,float64,rolling,Media movil 6 meses de violencia_familiar (sin incluir mes actual),Derivada de violencia_familiar con shift(1).rolling(6)
+violencia_familiar_roll12_mean,float64,rolling,Media movil 12 meses de violencia_familiar (sin incluir mes actual),Derivada de violencia_familiar con shift(1).rolling(12)
+violencia_familiar_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de violencia_familiar (sin incluir mes actual),Derivada de violencia_familiar con shift(1).rolling(3).std()
+violencia_familiar_yoy_change,float64,tendencia,Cambio year-over-year de violencia_familiar: (x_t - x_t-12) / (x_t-12 + 1),Derivada de violencia_familiar y violencia_familiar_lag12
+otros_lag1,float64,lag,Conteo de otros en t-1 (mes anterior),Derivada de otros con shift(1)
+otros_lag2,float64,lag,Conteo de otros en t-2 (hace 2 meses),Derivada de otros con shift(2)
+otros_lag3,float64,lag,Conteo de otros en t-3 (hace 3 meses),Derivada de otros con shift(3)
+otros_lag12,float64,lag,Conteo de otros en t-12 (mismo mes del anio anterior),Derivada de otros con shift(12)
+otros_roll3_mean,float64,rolling,Media movil 3 meses de otros (sin incluir mes actual),Derivada de otros con shift(1).rolling(3)
+otros_roll6_mean,float64,rolling,Media movil 6 meses de otros (sin incluir mes actual),Derivada de otros con shift(1).rolling(6)
+otros_roll12_mean,float64,rolling,Media movil 12 meses de otros (sin incluir mes actual),Derivada de otros con shift(1).rolling(12)
+otros_roll3_std,float64,rolling,Desviacion estandar movil 3 meses de otros (sin incluir mes actual),Derivada de otros con shift(1).rolling(3).std()
+otros_yoy_change,float64,tendencia,Cambio year-over-year de otros: (x_t - x_t-12) / (x_t-12 + 1),Derivada de otros y otros_lag12
+covid_lockdown,int64,dummy,"1 si el mes es abril-junio 2020 (periodo de confinamiento estricto), 0 en caso contrario",Derivada de fecha
+covid_period,int64,dummy,"1 si el anio es 2020 o 2021 (periodo general de pandemia), 0 en caso contrario",Derivada de fecha
+crimen_violento_total,float64,target,Suma de homicidio_doloso + feminicidio + robo_violento + secuestro (variable objetivo),Derivada de conteos crudos

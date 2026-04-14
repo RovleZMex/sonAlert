@@ -8,6 +8,42 @@ Modelo predictivo de incidencia delictiva municipal para el estado de Sonora, Me
 
 Hermosillo y Ciudad Obregon (Cajeme) figuran en el ranking 2025 de las 50 ciudades mas violentas del mundo. Hermosillo registró un aumento del 60% en homicidios. Este proyecto construye un *pipeline* de datos y un modelo que predice la **incidencia de crimen violento por municipio y mes** usando datos históricos del portal de datos abiertos de Sonora, con el objetivo de optimizar la asignación de recursos policiales a nivel estatal.
 
+## Planteamiento del problema
+
+### ¿Que problema se plantea resolver?
+
+Clasificar cada combinacion municipio-mes en un **nivel de riesgo de crimen violento** (bajo, medio, alto o critico) para que las autoridades estatales puedan anticipar donde y cuando concentrar recursos policiales, en lugar de reaccionar despues de que los incidentes ya ocurrieron.
+
+### ¿Por que es un problema importante?
+
+- Sonora tiene 72 municipios pero recursos policiales limitados; la distribucion actual de patrullaje y operativos es **reactiva**, basada en lo que ya paso.
+- Un modelo predictivo permite pasar de una asignacion reactiva a una **preventiva**, anticipando meses y municipios de alto riesgo antes de que escalen.
+- Hermosillo y Cajeme figuran en el top 50 de ciudades mas violentas del mundo (2025), lo que evidencia la **urgencia** de herramientas basadas en datos para la toma de decisiones en seguridad publica.
+
+### ¿Que problema de aprendizaje implica?
+
+Es un problema de **clasificacion multiclase**. A partir de la variable continua `crimen_violento_total` (suma de homicidio doloso, feminicidio, robo violento y secuestro), se discretiza en 4 clases de riesgo:
+
+| Clase | Rango de `crimen_violento_total` | Interpretacion |
+|-------|----------------------------------|----------------|
+| **Bajo** | 0 | Sin incidentes de crimen violento |
+| **Medio** | 1 – 5 | Incidencia esporadica |
+| **Alto** | 6 – 20 | Incidencia sostenida |
+| **Critico** | > 20 | Concentracion grave de violencia |
+
+### ¿Que metricas permiten medir la calidad del modelo?
+
+| Metrica | Que mide | Valor deseable |
+|---------|----------|----------------|
+| **Recall clase "critico"** | Proporcion de meses criticos correctamente detectados | > 0.85 |
+| **Precision clase "critico"** | Proporcion de alertas criticas que realmente lo son | > 0.70 |
+| **F1 macro** | Balance general entre las 4 clases | > 0.65 |
+
+### ¿Como se alinean las metricas con los objetivos institucionales?
+
+- **Recall alto en la clase "critico":** El costo de no anticipar un mes violento — medido en vidas perdidas y deterioro de la percepcion de seguridad — es mucho mayor que el costo de enviar patrullas adicionales a un municipio que resulte tranquilo. Por eso se prioriza recall sobre precision en esta clase.
+- **Precision razonable en "critico":** Asegurar que las alertas criticas sean confiables evita la sobreasignacion de recursos, que dejaria descubiertos a otros municipios. Un balance precision-recall permite calibrar mejor el presupuesto policial disponible.
+
 ## *Quick Start*
 
 ```bash
