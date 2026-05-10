@@ -6,7 +6,7 @@
 
 Modelo predictivo de incidencia delictiva municipal para el estado de Sonora, Mexico.
 
-Hermosillo y Ciudad Obregon (Cajeme) figuran en el ranking 2025 de las 50 ciudades mas violentas del mundo. Hermosillo registró un aumento del 60% en homicidios. Este proyecto construye un *pipeline* de datos y un modelo que predice la **incidencia de crimen violento por municipio y mes** usando datos históricos del portal de datos abiertos de Sonora, con el objetivo de optimizar la asignación de recursos policiales a nivel estatal.
+Ciudad Obregón (Cajeme) y Hermosillo aparecen en los lugares **9** y **46** del ranking 2025 de las 50 ciudades más violentas del mundo, elaborado por el CCSPJP, la Comisión Mexicana de Derechos Humanos (CMDH) y Misión Rescate México. Este proyecto construye un *pipeline* de datos y un modelo que predice la **incidencia de crimen violento por municipio y mes** usando datos históricos del portal de datos abiertos de Sonora, con el objetivo de optimizar la asignación de recursos policiales a nivel estatal.
 
 ## Planteamiento del problema
 
@@ -18,7 +18,7 @@ Clasificar cada combinacion municipio-mes en un **nivel de riesgo de crimen viol
 
 - Sonora tiene 72 municipios pero recursos policiales limitados; la distribucion actual de patrullaje y operativos es **reactiva**, basada en lo que ya paso.
 - Un modelo predictivo permite pasar de una asignacion reactiva a una **preventiva**, anticipando meses y municipios de alto riesgo antes de que escalen.
-- Hermosillo y Cajeme figuran en el top 50 de ciudades mas violentas del mundo (2025), lo que evidencia la **urgencia** de herramientas basadas en datos para la toma de decisiones en seguridad publica.
+- Cajeme (#9) y Hermosillo (#46) aparecen en el ranking 2025 de las 50 ciudades más violentas del mundo (CCSPJP / CMDH / Misión Rescate México), lo que evidencia la **urgencia** de herramientas basadas en datos para la toma de decisiones en seguridad pública.
 
 ### ¿Que problema de aprendizaje implica?
 
