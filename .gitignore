@@ -2,8 +2,14 @@
 CLAUDE.md
 /.claude/
 
-# Data
-/data/
+# Data — los archivos crudos se versionan con DVC; en git solo viven los pointer .dvc
+/data/**
+!/data/**/*.dvc
+!/data/.gitignore
+!/data/**/.gitignore
+
+# MLflow local (no deberia existir; usamos servidor en DagsHub)
+/mlruns/
 
 # Mac OS-specific storage files
 .DS_Store
