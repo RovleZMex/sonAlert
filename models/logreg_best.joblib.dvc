@@ -1,0 +1,5 @@
+outs:
+- md5: 0790bd3c767d0f0c2634929737d3c986
+  size: 8631
+  hash: md5
+  path: logreg_best.joblib

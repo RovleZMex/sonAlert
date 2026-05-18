@@ -1,0 +1,22 @@
+{
+  "variable_continua": "crimen_violento_total",
+  "clases": {
+    "bajo": 0,
+    "medio": 1,
+    "alto": 2,
+    "critico": 3
+  },
+  "cortes": [
+    -1.0,
+    0.0,
+    5.0,
+    20.0,
+    "inf"
+  ],
+  "labels": [
+    0,
+    1,
+    2,
+    3
+  ]
+}
