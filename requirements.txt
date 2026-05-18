@@ -23,4 +23,15 @@ openpyxl
 openpyxl
 pyarrow
 
+# MLOps (DagsHub + MLflow + DVC)
+dagshub
+mlflow
+dvc[s3]
+
+# Modeling & experiment tracking
+optuna
+xgboost
+lightgbm
+shap
+
 -e .

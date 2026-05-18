@@ -1,6 +1,7 @@
 # Claude configuration
 CLAUDE.md
 /.claude/
+/production/
 
 # Data — los archivos crudos se versionan con DVC; en git solo viven los pointer .dvc
 /data/**
