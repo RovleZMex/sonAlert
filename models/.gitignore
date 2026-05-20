@@ -1,2 +1,4 @@
 /preprocessor.joblib
 /logreg_best.joblib
+/svm_best.joblib
+/rf_best.joblib
