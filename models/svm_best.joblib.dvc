@@ -1,0 +1,5 @@
+outs:
+- md5: ef4041a7cde31441ee268be64c9e1171
+  size: 3021055
+  hash: md5
+  path: svm_best.joblib
