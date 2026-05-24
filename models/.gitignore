@@ -2,3 +2,5 @@
 /logreg_best.joblib
 /svm_best.joblib
 /rf_best.joblib
+/lgbm_best.joblib
+/xgb_best.joblib
