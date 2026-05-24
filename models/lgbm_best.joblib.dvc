@@ -1,0 +1,5 @@
+outs:
+- md5: b0a2152abcf2ad1fc0a51ce4ebae998f
+  size: 2912548
+  hash: md5
+  path: lgbm_best.joblib
